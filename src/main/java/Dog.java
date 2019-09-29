@@ -1,9 +1,9 @@
-package main.java;
-
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
-public class Dog extends Animal {
+public class Dog extends Animal implements Serializable {
+    private static final long serialVersionUID = 6128016096756071380L;
     public LocalDateTime LastWalk;
     public boolean NeedsWalk;
 
@@ -14,7 +14,8 @@ public class Dog extends Animal {
         super(name, gender);
         this.LastWalk = LocalDateTime.now();
     }
-    public String ToString() {
-        return super.ToString() + ", last walk: " + this.LastWalk.toString();
+    @Override
+    public String toString() {
+        return super.toString() + ", last walk: " + this.LastWalk.toString();
     }
 }

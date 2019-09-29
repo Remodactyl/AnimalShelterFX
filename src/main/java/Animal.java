@@ -1,8 +1,9 @@
-package main.java;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public abstract class Animal {
+public abstract class Animal implements Serializable {
+    private static final long serialVersionUID = 6128016096756071380L;
     public void setName(String name) {
         Name = name;
     }
@@ -44,11 +45,12 @@ public abstract class Animal {
         return false;
     }
 
-    public String ToString() {
-        String reserved = "not reserved";
+    @Override
+    public String toString() {
+        String reserved = ", not reserved";
         if (this.ReservedBy != null) {
-            reserved = "reserved by {this.ReservedBy.Name}";
+            reserved = ", reserved by " + this.ReservedBy;
         }
-        return this.Name + "," + this.gender + reserved;
+        return this.Name + ", " + this.gender + reserved;
     }
 }

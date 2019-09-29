@@ -1,6 +1,6 @@
-package main.java;
+import java.io.Serializable;
+public enum Gender implements Serializable {
 
-public enum Gender {
     Male,
     Female
 }

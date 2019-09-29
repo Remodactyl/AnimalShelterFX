@@ -1,9 +1,8 @@
-package main.java;
-
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Reservation {
+public class Reservation implements Serializable {
     public List<Animal> Animals = new ArrayList<>();
 
     public void NewCat(String name, Gender gender, String badHabits) {

@@ -1,8 +1,8 @@
-package main.java;
-
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class Reservor {
+public class Reservor implements Serializable {
+    private static final long serialVersionUID = 6128016096756071380L;
     private String Name;
     public String getName() {
         return Name;
@@ -22,6 +22,11 @@ public class Reservor {
     public Reservor(String name, LocalDateTime reservedAt) {
         this.setName(name);
         this.setReservedAt(reservedAt);
+    }
+
+    @Override
+    public String toString() {
+        return this.Name;
     }
 
 

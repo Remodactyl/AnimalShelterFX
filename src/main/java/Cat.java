@@ -1,6 +1,7 @@
-package main.java;
+import java.io.Serializable;
 
-public class Cat extends Animal {
+public class Cat extends Animal implements Serializable{
+    private static final long serialVersionUID = 6128016096756071380L;
     public String BadHabits;
 
     public void setBadHabits(String badHabits) {
@@ -15,8 +16,8 @@ public class Cat extends Animal {
         super(name, gender);
         this.BadHabits = badHabits;
     }
-
-    public String ToString() {
-        return super.ToString() + ", bad habits: " + this.BadHabits.toLowerCase();
+    @Override
+    public String toString() {
+        return super.toString() + ", bad habits: " + this.BadHabits.toLowerCase();
     }
 }

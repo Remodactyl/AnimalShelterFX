@@ -1,9 +1,7 @@
-package main.java.test.java;
 
-import main.java.Dog;
-import main.java.Gender;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
 import java.time.LocalDateTime;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -19,11 +17,11 @@ class DogTest {
         //Arrange
 
         //Act
-        Dog dog1 = new Dog ("Mumford", Gender.Male);
-        Dog dog2 = new Dog ("Babette", Gender.Female);
+        Dog dog1 = new Dog("Mumford", Gender.Male);
+        Dog dog2 = new Dog("Babette", Gender.Female);
         //Assert
-        assertEquals("Mumford", dog1.Name);
-        assertEquals("Babette", dog2.Name);
+        Assertions.assertEquals("Mumford", dog1.Name);
+        Assertions.assertEquals("Babette", dog2.Name);
     }
 
     @Test
